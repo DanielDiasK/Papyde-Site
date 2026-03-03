@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Backgrounds */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9f8f7;
+  --bg-tertiary: #f0eeea;
+
+  /* Text */
+  --text-primary: #1a1410;
+  --text-secondary: #6b5e55;
+  --text-muted: #a89e96;
+
+  /* Borders */
+  --border: #e2dcd6;
+  --border-light: #ede8e3;
+
+  /* Accents — all warm & neutral */
+  --accent-dark: #1a1410;
+  /* deepest brown-black */
+  --accent-brown: #3d3028;
+  /* warm dark brown */
+  --accent-mid: #7a6a5e;
+  /* medium warm brown */
+  --accent-sand: #c4a882;
+  /* sandy tan */
+  --accent-cream: #e8ddd3;
+  /* soft cream */
+  --accent-warm: #a08060;
+  /* warm tone */
+
+  /* Shadows */
+  --tab-shadow: 0 -2px 8px rgba(26, 20, 16, 0.06);
+  --card-shadow: 0 4px 24px rgba(26, 20, 16, 0.07);
+}
+
+.dark {
+  /* Backgrounds — Notion-style pure dark */
+  --bg-primary: #191919;
+  --bg-secondary: #202020;
+  --bg-tertiary: #2d2d2d;
+
+  /* Text — Notion-style white-ish */
+  --text-primary: rgba(255, 255, 255, 0.90);
+  /* #ffffffe6 */
+  --text-secondary: rgba(255, 255, 255, 0.65);
+  /* #ffffffa6 */
+  --text-muted: rgba(255, 255, 255, 0.40);
+  /* #ffffff66 */
+
+  /* Borders — subtle white alpha */
+  --border: rgba(255, 255, 255, 0.09);
+  /* #ffffff17 */
+  --border-light: rgba(255, 255, 255, 0.05);
+  /* #ffffff0d */
+
+  /* Accents — brown only for CTAs, icons & explicit highlights */
+  --accent-dark: #ffffff;
+  --accent-brown: #c4a882;
+  /* used on buttons/icons */
+  --accent-mid: rgba(255, 255, 255, 0.50);
+  /* section labels, muted */
+  --accent-sand: #c4a882;
+  /* explicit warm accents */
+  --accent-cream: rgba(255, 255, 255, 0.06);
+  --accent-warm: rgba(255, 255, 255, 0.45);
+  /* labels = neutral, not brown */
+
+  --tab-shadow: 0 -2px 8px rgba(0, 0, 0, 0.5);
+  --card-shadow: 0 4px 32px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Selection */
+::selection {
+  background: rgba(196, 168, 130, 0.25);
+  color: var(--text-primary);
+}
+
+/* Animations */
+
+
+/* Gradient text — warm brown to sandy tan */
+.gradient-text {
+  background: linear-gradient(135deg, #1a1410 0%, #7a6a5e 50%, #c4a882 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.80) 60%, #c4a882 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass */
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+}
+
+.dark .glass {
+  background: rgba(25, 25, 25, 0.80);
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--accent-sand);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* HR */
+.notion-hr {
+  height: 1px;
+  background: var(--border);
+  border: none;
+}
