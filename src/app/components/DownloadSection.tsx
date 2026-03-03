@@ -71,7 +71,8 @@ export default function DownloadSection() {
 
                     {/* Download button */}
                     <motion.a
-                        href="#"
+                        href="/Papyde Setup 1.0.0.exe"
+                        download
                         whileHover={{ scale: 1.04, boxShadow: "0 10px 40px rgba(26,20,16,0.22)" }}
                         whileTap={{ scale: 0.97 }}
                         style={{

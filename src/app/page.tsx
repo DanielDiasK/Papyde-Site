@@ -290,7 +290,8 @@ export default function Home() {
               style={{ display: "flex", gap: 12, justifyContent: "center", alignItems: "center", flexWrap: "wrap" }}
             >
               <motion.a
-                href="#download"
+                href="/Papyde Setup 1.0.0.exe"
+                download
                 whileHover={{ scale: 1.04, boxShadow: "0 8px 32px rgba(26,20,16,0.25)" }}
                 whileTap={{ scale: 0.97 }}
                 style={{
